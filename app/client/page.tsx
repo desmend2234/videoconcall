@@ -9,7 +9,11 @@ function ClientPage() {
     return null;
   }
 
-  return <div>Hello, {user.firstName} welcome to Clerk</div>;
+  return (
+    <div className="flex justify-center items-center bg-black text-white h-screen">
+      Hello, {user.firstName}, welcome to have a call with friends
+    </div>
+  );
 }
 
 export default ClientPage;

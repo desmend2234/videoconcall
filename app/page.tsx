@@ -1,23 +1,29 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import useUser from './hooks/useUser';
+// import useUser from './hooks/useUser';
+import { useUser } from '@clerk/nextjs';
 import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { FiArrowRight } from 'react-icons/fi';
 import { useMotionTemplate, useMotionValue, motion, animate } from 'framer-motion';
+import { currentUser } from '@clerk/nextjs/server';
 
 const COLORS_TOP = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C'];
 
 export default function Home() {
-  const { fullName, setFullName } = useUser();
+  // const { fullName, setFullName } = useUser();
+  const { user } = useUser();
+
+  const fullName = user?.username;
   const [roomId, setRoomId] = useState('');
   const router = useRouter();
   const [openBtn, setOpenBtn] = useState(false);
-  useEffect(() => {
-    setFullName('');
-  }, []);
+  // useEffect(() => {
+  //   setFullName('');
+  // }, []);
+  // const user = await currentUser();
 
   const color = useMotionValue(COLORS_TOP[0]);
 
@@ -71,7 +77,7 @@ export default function Home() {
           </motion.button>
         )}
 
-        {openBtn && (
+        {/* {openBtn && (
           <div className="w-[50dvw] md:w-[30dvw] flex items-center justify-center gap-4 mt-6">
             <input
               type="text"
@@ -81,7 +87,7 @@ export default function Home() {
               placeholder="Enter your name"
             />
           </div>
-        )}
+        )} */}
         {fullName && fullName.length > 0 && (
           <>
             <div className="w-[50dvw] md:w-[30dvw] flex items-center justify-center gap-4 mt-4">

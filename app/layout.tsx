@@ -27,7 +27,7 @@ export default function RootLayout({
             <div className="flex justify-center items-center text-2xl h-screen">Loading...</div>
           </ClerkLoading>
           <ClerkLoaded>
-            <div className="mx-auto max-w-6xl">
+            <div className="">
               <div className="flex flex-col h-screen">
                 <Navbar />
                 {children}
