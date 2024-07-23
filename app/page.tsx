@@ -42,13 +42,13 @@ export default function Home() {
       className="w-full relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
     >
       <div className="relative z-10 flex flex-col items-center">
-        <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
+        <span className="mb-1.5 inline-block rounded-full capitalize bg-gray-600/50 px-3 py-1.5 text-sm">
           Start a talk
         </span>
-        <h1 className="max-w-3xl bg-gradient-to-br from-white via-zinc-300 to-gray-500 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+        <h1 className="max-w-3xl bg-gradient-to-br from-white via-zinc-300 to-gray-500 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl capitalize md:leading-tight">
           Have a smooth meeting
         </h1>
-        <p className="bg-clip-text  font-extrabold text-transparent my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 uppercase">
+        <p className="bg-clip-text  font-extrabold text-transparent my-6 max-w-[20rem] md:max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 capitalize tracking-widest text-pretty break-words">
           Making remote communication effortless
         </p>
         {!fullName && (
@@ -72,7 +72,7 @@ export default function Home() {
         )}
 
         {openBtn && (
-          <div className="w-[30dvw] flex items-center justify-center gap-4 mt-6">
+          <div className="w-[50dvw] md:w-[30dvw] flex items-center justify-center gap-4 mt-6">
             <input
               type="text"
               className="border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2 w-full text-black"
@@ -84,13 +84,13 @@ export default function Home() {
         )}
         {fullName && fullName.length > 0 && (
           <>
-            <div className="w-[30dvw] flex items-center justify-center gap-4 mt-4">
+            <div className="w-[50dvw] md:w-[30dvw] flex items-center justify-center gap-4 mt-4">
               <input
                 type="text"
                 id="roomid"
                 value={roomId}
                 onChange={(e) => setFullName(e.target.value)}
-                className="border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2 w-full text-black"
+                className="w-[30dvw] md:w-full border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2  text-black"
                 placeholder="Enter room id"
               />
               {/* <button
@@ -113,7 +113,7 @@ export default function Home() {
                 }}
                 onClick={() => router.push(`/room/${roomId}`)}
                 disabled={!roomId}
-                className="group relative flex w-fit items-center gap-1.5  bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 cursor-pointer rounded-sm"
+                className="group relative flex max-w-fit md:w-full items-center gap-1.5  bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 cursor-pointer rounded-lg"
               >
                 Go
                 <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />

@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.2.4",
+    "@clerk/themes": "^2.1.12",
     "@react-three/drei": "^9.108.4",
     "@zegocloud/zego-uikit-prebuilt": "^2.6.0",
     "framer-motion": "^11.3.8",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "svix": "^1.25.0",
     "uuid": "^10.0.0",
     "zustand": "^4.5.4"
   },
