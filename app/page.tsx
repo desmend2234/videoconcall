@@ -95,7 +95,7 @@ export default function Home() {
                 type="text"
                 id="roomid"
                 value={roomId}
-                onChange={(e) => setFullName(e.target.value)}
+                // onChange={(e) => setFullName(e.target.value)}
                 className="w-[30dvw] md:w-full border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2  text-black"
                 placeholder="Enter room id"
               />
