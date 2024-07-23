@@ -9,6 +9,7 @@ import { Canvas } from '@react-three/fiber';
 import { FiArrowRight } from 'react-icons/fi';
 import { useMotionTemplate, useMotionValue, motion, animate } from 'framer-motion';
 import { currentUser } from '@clerk/nextjs/server';
+import Link from 'next/link';
 
 const COLORS_TOP = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C'];
 
@@ -19,7 +20,7 @@ export default function Home() {
   const fullName = user?.username;
   const [roomId, setRoomId] = useState('');
   const router = useRouter();
-  const [openBtn, setOpenBtn] = useState(false);
+  // const [openBtn, setOpenBtn] = useState(false);
   // useEffect(() => {
   //   setFullName('');
   // }, []);
@@ -58,7 +59,8 @@ export default function Home() {
           Making remote communication effortless
         </p>
         {!fullName && (
-          <motion.button
+          <motion.a
+            href="/sign-in"
             style={{
               border,
               boxShadow,
@@ -69,12 +71,29 @@ export default function Home() {
             whileTap={{
               scale: 0.985,
             }}
-            onClick={() => setOpenBtn(true)}
+            // onClick={() => setOpenBtn(true)}
             className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
           >
             Start free trial
             <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-          </motion.button>
+          </motion.a>
+          // <motion.Link
+          //   style={{
+          //     border,
+          //     boxShadow,
+          //   }}
+          //   whileHover={{
+          //     scale: 1.015,
+          //   }}
+          //   whileTap={{
+          //     scale: 0.985,
+          //   }}
+          //   // onClick={() => setOpenBtn(true)}
+          //   className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+          // >
+          //   Start free trial
+          //   <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+          // </motion.Link>
         )}
 
         {/* {openBtn && (
