@@ -7,13 +7,13 @@ function Navbar() {
   const { userId } = auth();
   return (
     <div className=" bg-black">
-      <ul className="flex justify-between py-4 px-6 text-white">
+      <ul className="flex justify-end gap-4 py-4 px-6 text-white">
         <div>
           <Link href="/">Home</Link>
         </div>
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <Link href="/client">Client page</Link>
-        </div>
+        </div> */}
         <div className="gap-6 flex items-center">
           {!userId ? (
             <>

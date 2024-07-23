@@ -10,7 +10,6 @@ const Profile = async () => {
   if (!isAuth) {
     redirect('/');
   }
-  console.log(user);
   return (
     <div className="flex items-center justify-center flex-col mt-4">
       <h1 className="text-2xl mb-2">{user?.firstName}</h1>

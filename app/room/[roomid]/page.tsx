@@ -1,17 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-// import useUser from '@/app/hooks/useUser';
 import { useUser } from '@clerk/nextjs';
 
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 import { v4 as uuid } from 'uuid';
 
 function Room({ params }: { params: { roomid: string } }) {
-  // const { fullName } = useUser();
   const { user } = useUser();
 
-  const fullName = user?.username;
+  const fullName = user?.firstName;
   const roomID = params.roomid;
   const router = useRouter();
 
