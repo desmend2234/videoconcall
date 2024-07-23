@@ -6,7 +6,6 @@ import { ClerkLoaded, ClerkProvider, ClerkLoading } from '@clerk/nextjs';
 import Navbar from './components/Navbar';
 
 import { dark } from '@clerk/themes';
-import Loader from './components/Loader';
 
 const inter = Inter({ subsets: ['latin'] });
 
