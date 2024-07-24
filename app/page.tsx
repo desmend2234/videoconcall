@@ -75,11 +75,11 @@ export default function Home() {
 
         {fullName && fullName.length > 0 && (
           <>
-            <div className="w-[50dvw] md:w-[30dvw] flex items-center justify-center gap-4 mt-4">
+            <div className="w-[60dvw] md:w-[30dvw] flex items-center justify-center gap-4 mt-4">
               <input
                 type="text"
                 id="roomid"
-                className="w-[30dvw] md:w-full border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2  text-black"
+                className="w-[40dvw] md:w-full border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2  text-black"
                 placeholder="Enter room id"
               />
 
@@ -104,7 +104,7 @@ export default function Home() {
             </div>
             <div className="mt-4 flex items-center justify-center">
               <button
-                className="text-lg font-medium duration-200 transition-all hover:text-blue-400 hover:underline"
+                className="text-2xl font-medium duration-300 transition-all hover:text-blue-400 hover:underline bg-gradient-to-br from-white via-zinc-300 to-gray-500 bg-clip-text "
                 onClick={() => router.push(`/room/${uuid()}`)}
               >
                 Create a room

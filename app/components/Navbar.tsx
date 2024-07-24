@@ -7,26 +7,24 @@ function Navbar() {
   const { userId } = auth();
   return (
     <div className=" bg-black">
-      <ul className="flex justify-end gap-4 py-4 px-6 text-white">
-        <div>
+      <ul className="flex justify-end px-4 items-center py-6 text-white text-xl ">
+        {/* <div>
           <Link href="/">Home</Link>
-        </div>
-        {/* <div className="flex items-center">
-          <Link href="/client">Client page</Link>
         </div> */}
-        <div className="gap-6 flex items-center">
+
+        <div className="gap-8 flex items-center ">
           {!userId ? (
             <>
-              <Link href="/sign-in">
+              <Link href="/sign-in" className="hover:text-blue-400 ransition-all duration-300">
                 <li>Login</li>
               </Link>
-              <Link href="/sign-up">
-                <li>Sign-up</li>
+              <Link href="/sign-up" className="hover:text-blue-400 ransition-all duration-300">
+                <li>SignUp</li>
               </Link>
             </>
           ) : (
             <>
-              <Link href="/profile">
+              <Link href="/profile" className="hover:text-blue-400 ransition-all duration-300">
                 <li>Profile</li>
               </Link>
               <li className="flex items-center">
